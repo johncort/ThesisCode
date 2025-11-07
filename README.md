@@ -12,7 +12,7 @@ Given the storage requirements necessary to perform these simulations on my pers
 During the glacier simulations, the climate data used for forcing was additionally saved in order to create plots of the subregional variability in projected temperature and precipitation change. Across the sample of ~10,000 glaciers, each climate file was multiple GBs large, hence the [conversion of CSV files to Parquet files for their processing](https://github.com/johncort/ThesisCode/blob/main/Modules/Analysis/ProcessClimateData.py). 
 
 <p align="center">
-  <img width="5500" height="2000" alt="MultiVol" src="https://github.com/user-attachments/assets/57ec1292-f31b-4fef-ab4b-c1421459524a" /><br>
+  <img width="5500" height="2000" alt="MultiVol" src="https://github.com/user-attachments/assets/9c3cd1e2-f757-42a1-b72f-fab82c4ddfb2" /><br>
   <i>Simulated regional (a) and subregional (b) volume change of Alaska's land-terminating glaciers</i>
 </p>
 
