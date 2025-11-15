@@ -163,12 +163,7 @@ def GCM_run(GCM):
         pattern = re.compile(
             rf'fl_diagnostics_(RGI60-\d+\.\d+)_CMIP6_{GCM}_{ssp}\.nc'
         )
-        args_list = [
-            (filepath, pattern, processed_glaciers, elev_bins, bin_centres,
-            time_initial, time_final, t_change, GCM, ssp)
-            for filepath in list(data_dir.glob(f'fl_diagnostics_*_{ssp}.nc'))
-        ]
-
+        
         # Edits the GCM naming structure then forms path to parquet file for export (note: had to rename the GCM due to the fact I was inconsistent with my use of - and _ in filenames in other code)
         GCM_export = GCM.replace("-", "_")
         parquet_path = output_dir / 'Processed' / f'{GCM_export}_export_{ssp}.parquet'
