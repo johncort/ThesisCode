@@ -20,4 +20,4 @@ All analyses were conducted in Jupyter Notebooks, however I have compiled the da
 
 Whilst I have tried to make these functions as reusable as possible, their primary goal was to deliver the simulations, analyses, and plots required for my thesis, hence they would likely require tweaking for other uses. Arising following plenty of trial and error when dealing with such large datasets, much of the analysis and plotting code, whilst functional for my needs, is likely far from optimal. I have tried to provide expanded commenting for various lines of code to provide the rationale behind my decision making.
 
-N.B. This repository recreates my original thesis repository but removes any mention of my candidate ID - the code files are unchanged, only some small restructuring of filepaths and reformatting of this README has been made. 
+N.B. This repository recreates my original thesis repository but removes any mention of my candidate ID - The code files are almost entirely unchanged, only two minor edits have been made alongside some small restructuring of filepaths and reformatting of this README. 
