@@ -628,12 +628,13 @@ def process_plot(GCMs, totalregion=False, statistics = False, stat_sub = False):
                 subregion_df.loc[subregion_df['subregion'] == subregion, 'mean_norm_vol'].dropna().tolist()
                 for subregion in subregions
             ]
-            stat, p = kruskal(*subregion_lists)
-            print(f'Kruskal-Wallis H = {stat:.4f}, p = {p:.4e}')
-
-            print(f'Kruskal-Wallis test failed: {e}')
-            p = None
-
+            try:
+                stat, p = kruskal(*subregion_lists)
+                print(f'Kruskal-Wallis H = {stat:.4f}, p = {p:.4e}')
+            except Exception as e:
+                print(f'Kruskal-Wallis test failed: {e}')
+                p = None
+                
             # Conducts Dunn's test using Bonferroni correction for p values (if Kruskal-Wallis test returns a significant p)
             if p is not None and p < 0.05:
                 print("Significant differences found so performing post hoc Dunn's test\n")
